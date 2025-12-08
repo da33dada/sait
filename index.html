@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Сайт ни о чём</title>
+    <style>
+      
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }      
+      .navbar {
+        background: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        display: flex;
+        padding: 15px;
+        z-index: 1000;
+      }
+      .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+      }
+      .navbar a:hover {
+        background: #555;
+      }     
+      .container {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        margin-top: 60px;
+      }      
+      .section {
+        padding: 80px 20px;
+        min-height: 600px;
+      }     
+      #home {
+        background: #f4f4f4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .main-img {
+        width: 80%;
+        max-width: 800px;
+        height: 400px;
+        background: #ddd;
+        margin: 30px 0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .main-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      #about {
+        background: white;
+      }
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 30px;
+      }
+      .about-img {
+        width: 100%;
+        height: 350px;
+        background: #eee;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .about-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }     
+      #services {
+        background: #f9f9f9;
+      }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 30px;
+      }
+      .service-card {
+        background: white;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      }
+      .service-img {
+        width: 100%;
+        height: 400px;
+        background: #eee;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .service-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }   
+      #contact {
+        background: white;
+      }
+      .contact-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin-top: 30px;
+      }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      input,
+      textarea {
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      button {
+        background: #333;
+        color: white;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }  
+      footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        margin-top: 50px;
+      }
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      h2 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+      }
+      @media (max-width: 992px) {
+        .services-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        .about-content,
+        .contact-wrapper,
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        .section {
+          padding: 50px 15px;
+        }
+      }
+      @media (max-width: 480px) {
+        .navbar {
+          flex-direction: column;
+          text-align: center;
+        }
+        .container {
+          margin-top: 120px;
+        }
+        h1 {
+          font-size: 2em;
+        }
+        h2 {
+          font-size: 1.5em;
+        }
+      }
+    </style>
+  </head>
+  <body>    
+    <nav class="navbar">
+      <a href="#home">Главная</a>
+      <a href="#about">О нас</a>
+      <a href="#services">Наши достижения</a>
+      <a href="#contact">Заявка</a>
+    </nav>    
+    <div class="container">
+      <section id="home" class="section">
+        <h1>Руководитель</h1>
+        <p></p>       
+        <div class="main-img">
+          <img src="dai.jpg" alt="Главное изображение" />
+        </div>
+        <p></p>
+      </section>      
+      <section id="about" class="section">
+        <h2>О нас</h2>
+        <div class="about-content">
+          <div>
+            <h3></h3>
+            <p>Ничем не занимаемся.</p>
+            <p></p>
+          </div>
+          <div>           
+            <div class="about-img">
+              <img src="toronto.jpg" alt="О нас" />
+            </div>
+          </div>
+        </div>
+      </section>      
+      <section id="services" class="section">
+        <h2>Список достижений</h2>
+        <div class="services-grid">          
+          <div class="service-card">            
+            <div class="service-img">
+              <img src="craft.jpg" alt="Услуга 1" />
+            </div>
+            <h3></h3>
+            <p></p>
+          </div>          
+          <div class="service-card">           
+            <div class="service-img">
+              <img src="ranalda.jpg" alt="Услуга 2" />
+            </div>
+            <h3></h3>
+            <p></p>
+          </div>         
+          <div class="service-card">  
+            <div class="service-img">
+              <img
+                src="blok.jpg"
+                alt="Услуга 3"
+              />
+            </div>
+            <h3></h3>
+            <p></p>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="section">
+          <form class="contact-form">
+            <input type="text" placeholder="Ваше имя" required />
+            <input type="email" placeholder="Ваш email" required />
+            <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </div> 
+    <footer>
+      <p>&copy; Сайт ни о чём.</p>
+    </footer>
+    <script>  
+      document.querySelectorAll(".navbar a").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute("href");
+          const targetSection = document.querySelector(targetId);
+
+          window.scrollTo({
+            top: targetSection.offsetTop - 60,
+            behavior: "smooth",
+          });
+        });
+      });
+      document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        alert("Сообщение отправлено!");
+        this.reset();
+      });
+    </script>
+  </body>
+</html>
